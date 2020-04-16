@@ -46,13 +46,19 @@ Tested: April 15, 2020; Passed with no problems.
 		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
 		<p><a href="#home">Back to foo</a></p>
     </div><!-- /content -->
-    
-    <div class="media-wrapper">
-        <h3>Eminem_Ft_Juice_WRLD_-_Godzilla</h3>
-        <audio id="player2" preload="none" controls style="max-width:100%;">
-            <source src="music/Eminem_Ft_Juice_WRLD_-_Godzilla-(APROKOMEDIA.COM).mp3" type="audio/mp3">
-        </audio> 
-    </div>
+    <div role="main" class="ui-content">
+		<div role="main" class="ui-content">
+			<!-- #2 Week 5 Unordered List added -->
+		<ul data-role="listview" data-inset="true">
+			<li data-role="list-divider">Hip-Hop</li>
+			<!-- #3 Week 8 -->
+			<li>Eminem_Ft_Juice_WRLD_-_Godzilla<audio id="player2" preload="none" controls style="max-width:100%;">
+                <source src="music/Eminem_Ft_Juice_WRLD_-_Godzilla-(APROKOMEDIA.COM).mp3" type="audio/mp3">
+            </audio> </li>
+
+			</ul>
+		</div>
+	</div>
 	<div data-role="footer">
 		<h4>Page Footer</h4>
 	</div><!-- /footer -->
