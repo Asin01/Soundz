@@ -14,6 +14,9 @@ Tested: April 15, 2020; Passed with no problems.
 <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/main.js"></script>
+
 </head>
 
 <body>
@@ -60,9 +63,70 @@ Tested: April 15, 2020; Passed with no problems.
                 <source src="music/Lady_Gaga_-_Stupid_Love-(APROKOMEDIA.COM).mp3" type="audio/mp3">
             </audio> 
         </div>
-	</div>
+    </div>
+
+    <div id="jquery-script-menu">
+        <div class="jquery-script-center">
+        <div class="jquery-script-ads"><script type="text/javascript">
+        /* jQuery_demo */
+        google_ad_slot = "2780937993";
+        google_ad_width = 728;
+        google_ad_height = 90;
+        //-->
+        </script>
+        <script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script></div>
+        <div class="jquery-script-clear"></div>
+        </div>
+        </div>
+        <div id="container">
+          <div id="audio-image"> <img class="cover"> </div>
+          <div id="audio-player">
+            <div id="audio-info"> <span class="artist"></span> - <span class="title"></span> </div>
+            <input id="volume" type="range" min="0" max="10" value="4">
+            <br>
+            <div id="buttons"> <span>
+              <button id="prev"></button>
+              <button id="play"></button>
+              <button id="pause"></button>
+              <button id="stop"></button>
+              <button id="next"></button>
+              </span> </div>
+            <div class="clearfix"></div>
+            <div id="tracker">
+              <div id="progress-bar"> <span id="progress"></span> </div>
+              <span id="duration">0:00</span> </div>
+            <div class="clearfix"></div>
+            <ul id="playlist" class="hidden">
+              <li song="Eminem.mp3" cover="Eminem-cover.jpg" artist="Eminem">Eminem.mp3</li>
+              <li song="Sample.mp3" cover="cover1.jpg" artist="Linkin Park">Sample.mp3</li>
+              <li song="Sample.mp3" cover="cover1.jpg" artist="Linkin Park">Sample.mp3</li>
+              <li song="Sample.mp3" cover="cover1.jpg" artist="Linkin Park">Sample.mp3</li>
+              <li song="Sample.mp3" cover="cover1.jpg" artist="Linkin Park">Sample.mp3</li>
+            </ul>
+          </div>
+        </div>
+        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="js/main.js"></script>
+        <script type="text/javascript">
+        
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-36251023-1']);
+          _gaq.push(['_setDomainName', 'jqueryscript.net']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        
+        </script>
 	<div data-role="footer">
 		<h4>Page Footer</h4>
 	</div><!-- /footer -->
 </div><!-- /page -->
+
+
 </body>
