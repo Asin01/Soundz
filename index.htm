@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--*****************************************************************************
+Title: Soundz
+Use: All pages of Soundz music app
+Author: Amir Sinanovic
+School/Term: SIU Carbondale, Spring 2020
+Developed: April 15, 2020
+Tested: April 15, 2020; Passed with no problems.
+******************************************************************************-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link rel="stylesheet" href="build/mediaelementplayer.min.css">
+</head>
+
+<body>
+<!-- Start of first page -->
+<div data-role="page" id="home">
+
+	<div data-role="header">
+		<h1>Home</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>I'm first in the source order so I'm shown as the page.</p>
+		<p>View internal page called <a href="#library">Library</a></p>
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of second page -->
+<div data-role="page" id="library">
+
+	<div data-role="header">
+		<h1>Library</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+		<p><a href="#home">Back to foo</a></p>
+    </div><!-- /content -->
+    
+    <div class="media-wrapper">
+        <h3>Eminem_Ft_Juice_WRLD_-_Godzilla</h3>
+        <audio id="player2" preload="none" controls style="max-width:100%;">
+            <source src="music/Eminem_Ft_Juice_WRLD_-_Godzilla-(APROKOMEDIA.COM).mp3" type="audio/mp3">
+        </audio> 
+    </div>
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+</body>
