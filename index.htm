@@ -44,11 +44,6 @@ Tested: April 15, 2020; Passed with no problems.
 		<h1>Library</h1>
 	</div><!-- /header -->
 
-	<div role="main" class="ui-content">
-		<p>Where all the music is</p>
-		<p><a href="#home">Home</a></p>
-    </div>
-    
         <div id="container">
           <div id="audio-image"> <img class="cover"> </div>
           <div id="audio-player">
@@ -75,9 +70,17 @@ Tested: April 15, 2020; Passed with no problems.
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="js/main.js"></script>
 
-	<div data-role="footer">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
+    <div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">
+		<div data-role="navbar">
+			<ul>
+				<!-- #5 Page Link added, #6 Pre-Fetching added, #7 Transition added -->
+				<li><a href="#home" rel="external" data-icon="home" data-prefetch="true" data-transition="slide">Home</a></li>
+				<!-- #5 Page Link added, #6 Pre-Fetching added, #7 Transition added -->
+				<li><a href="#library" rel="external" data-icon="bullets" data-prefetch="true" data-transition="slide">Library</a></li>
+			</ul>
+		</div>
+	<h4>Soundz &copy; 2020</h4>
+	</div>
 </div><!-- /page -->
 
 
