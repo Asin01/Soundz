@@ -26,10 +26,7 @@ Tested: April 15, 2020; Passed with no problems.
 <div data-role="page" id="home">
 
 	<div data-role="header">
-        <a href="contact.htm" rel="external" data-icon="mail" data-transition="slide">Contact</a>
 		<h1>Home</h1>
-		<!-- #5 Page Link added, #7 Transition added -->
-		<a href="about.htm" rel="external" data-icon="info" data-transition="slide">About</a>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
@@ -44,7 +41,7 @@ Tested: April 15, 2020; Passed with no problems.
                 <li><a href="#library" rel="external" data-icon="heart" data-prefetch="true" data-transition="slide">Favorites</a></li>
                 <li><a href="#library" rel="external" data-icon="video" data-prefetch="true" data-transition="slide">Video</a></li>
                 <li><a href="#library" rel="external" data-icon="calendar" data-prefetch="true" data-transition="slide">Tours</a></li>
-			    <li><a href="#library" rel="external" data-icon="comment" data-prefetch="true" data-transition="slide">Lyrics</a></li>
+			    <li><a href="#library" rel="external" data-icon="arrow-r" data-prefetch="true" data-transition="slide">More</a></li>
 			</ul>
 		</div>
 	<h4>Soundz &copy; 2020</h4>
@@ -84,15 +81,17 @@ Tested: April 15, 2020; Passed with no problems.
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="js/main.js"></script>
 
-    <div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">
-		<div data-role="navbar">
-			<ul>
-				<!-- #5 Page Link added, #6 Pre-Fetching added, #7 Transition added -->
-				<li><a href="#home" rel="external" data-icon="home" data-prefetch="true" data-transition="slide">Home</a></li>
-				<!-- #5 Page Link added, #6 Pre-Fetching added, #7 Transition added -->
-				<li><a href="#library" rel="external" data-icon="bullets" data-prefetch="true" data-transition="slide">Library</a></li>
-			</ul>
-		</div>
+        <div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">
+            <div data-role="navbar">
+                <ul>
+                    <!-- #5 Page Link added, #6 Pre-Fetching added, #7 Transition added -->
+                    <li><a href="#library" rel="external" data-icon="audio" data-prefetch="true" data-transition="slide">Soundz</a></li>
+                    <li><a href="#library" rel="external" data-icon="heart" data-prefetch="true" data-transition="slide">Favorites</a></li>
+                    <li><a href="#library" rel="external" data-icon="video" data-prefetch="true" data-transition="slide">Video</a></li>
+                    <li><a href="#library" rel="external" data-icon="calendar" data-prefetch="true" data-transition="slide">Tours</a></li>
+                    <li><a href="#library" rel="external" data-icon="arrow-r" data-prefetch="true" data-transition="slide">More</a></li>
+                </ul>
+            </div>
 	<h4>Soundz &copy; 2020</h4>
     </div>
 </div>
