@@ -26,15 +26,19 @@ Tested: April 15, 2020; Passed with no problems.
 <div data-role="page" id="home">
 
 	<div data-role="header">
-        <a href="contact.htm" rel="external" data-icon="mail" data-transition="slide"></a>
-		<h1>Home</h1>
-		<!-- #5 Page Link added, #7 Transition added -->
-		<a href="about.htm" rel="external" data-icon="info" data-transition="slide"></a>
-	</div><!-- /header -->
+        <h1>Home</h1>
+    </div><!-- /header -->
+        <div data-role="navbar">
+			<ul>
+				<!-- #5 Page Link added, #6 Pre-Fetching added, #7 Transition added -->
+                <li><a href="#library" rel="external" data-icon="mail" data-prefetch="true" data-transition="slide"></a></li>
+                <li><a href="#library" rel="external" data-icon="info" data-prefetch="true" data-transition="slide"></a></li>
+			</ul>
+		</div>
+
 
 	<div role="main" class="ui-content">
 		<p>Welcome to Soundz</p>
-		<p>View the music<a href="#library">Library</a></p>
 	</div><!-- /content -->
 
     <div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">
