@@ -80,11 +80,6 @@ $('#playlist li').click(function(){
 	showDuration();
 });
 
-//Volume control
-$('#volume').change(function(){
-	audio.volume = parseFloat(this.value / 10);
-});
-
 //Time/Duration
 function showDuration(){
 	$(audio).bind('timeupdate',function(){

@@ -34,24 +34,11 @@ body {
 
 #audio-image .cover { width: 100%; }
 
-#audio-info { text-align: center; }
+#audio-info { text-align: center;
+color: #1db954;
+text-shadow:none; }
 
 #audio-info .artist { font-weight: bold; }
-
-input#volume {
-  width: 95%;
-  margin-left: 2%;
-  -webkit-appearance: none !important;
-  background: #1db954;
-  height: 1px;
-  margin-bottom: 20px;
-}
-input#volume::-webkit-slider-thumb {
- -webkit-appearance:none !important;
- background:url(../images/knob.png) no-repeat;
- height:12px;
- width:12px;
-}
 
 #buttons {
   width: 90%;
@@ -67,6 +54,7 @@ button#play {
   background: url(../images/play.png) no-repeat;
   float: left;
   margin-left: -2px;
+  border:none;
 }
 
 button#pause {
@@ -75,6 +63,7 @@ button#pause {
   background: url(../images/pause.png) no-repeat;
   float: left;
   margin-left: -2px;
+  border:none;
 }
 
 button#stop {
@@ -83,6 +72,7 @@ button#stop {
   background: url(../images/stop.png) no-repeat;
   float: left;
   margin-left: 3px;
+  border:none;
 }
 
 button#prev {
@@ -91,6 +81,7 @@ button#prev {
   background: url(../images/prev.png) no-repeat;
   float: left;
   margin-top: 15px;
+  border:none;
 }
 
 button#next {
@@ -99,11 +90,14 @@ button#next {
   background: url(../images/next.png) no-repeat;
   float: right;
   margin-top: 15px;
+  border:none;
 }
 
 #tracker {
   position: relative;
   width: 100%;
+  color:#1db954;
+  text-shadow: none;
 }
 
 #progress-bar {
@@ -131,7 +125,9 @@ button#next {
   border-radius: 5px;
 }
 
-#playlist { list-style: none; }
+#playlist { list-style: none;
+color:white;
+text-shadow: none; }
 
 #playlist li {
   cursor: pointer;
@@ -140,6 +136,6 @@ button#next {
 
 #playlist li.active {
   font-weight: bold;
-  padding: 3px;
-  background: #666;
+  color:#1db954;
+  text-shadow: none;
 }
