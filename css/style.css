@@ -18,11 +18,7 @@ body {
 #container {
   width: 330px;
   min-height: 400px;
-  background: #121212;
   overflow: auto;
- 
-  border-radius: 13px;
-  box-shadow: 0 10px 8px -8px #333;
 }
 
 #audio-image {
