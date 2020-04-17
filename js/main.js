@@ -24,7 +24,6 @@ function initAudio(element){
 	$('#playlist li').removeClass('active');
 	element.addClass('active');
 }
-
 //Play button
 $('#play').click(function(){
 	audio.play();
