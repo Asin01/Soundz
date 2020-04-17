@@ -139,3 +139,7 @@ text-shadow: none; }
   color:#1db954;
   text-shadow: none;
 }
+#footernav h6 {
+  margin-bottom: 0px;
+  border-bottom: 0px;
+}
