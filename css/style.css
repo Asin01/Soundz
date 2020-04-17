@@ -38,10 +38,14 @@ text-shadow:none; }
 
 #buttons {
   width: 90%;
-  display: block;
-  margin: 15px auto;
-  margin-left: 23px;
+  display: inline-block;
   overflow: auto;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 button#play {
@@ -49,7 +53,7 @@ button#play {
   height: 70px;
   background: url(../images/play.png) no-repeat;
   float: left;
-  margin-left: -2px;
+  margin-left: 7px;
   border:none;
 }
 
@@ -58,7 +62,7 @@ button#pause {
   height: 70px;
   background: url(../images/pause.png) no-repeat;
   float: left;
-  margin-left: -2px;
+  margin-left: 7px;
   border:none;
 }
 

@@ -42,7 +42,9 @@ $('#pause').click(function(){
 
 //Stop button
 $('#stop').click(function(){
-	audio.pause();
+    audio.pause();
+    $('#pause').hide();
+    $('#play').show();
 	audio.currentTime = 0;
 });
 
