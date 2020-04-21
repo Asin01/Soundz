@@ -19,7 +19,6 @@ Tested: April 15, 2020; Passed with no problems.
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/favs.js"></script>
-
 </head>
 
 <body>
@@ -29,8 +28,7 @@ Tested: April 15, 2020; Passed with no problems.
 	<div data-role="header">
         <a href="#contact" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-notext ui-btn-b ui-btn-inline" data-transition="slide">Mail</a>
 		<h1>Home</h1>
-		<!-- #5 Page Link added, #7 Transition added -->
-		<a href="#about" class="ui-btn ui-shadow ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-b ui-btn-inline">About</a>
+		<a href="#about" class="ui-btn ui-shadow ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-b ui-btn-inline" data-transition="slide">About</a>
     </div><!-- /header -->
 	<div role="main" class="ui-content">
         <div style="text-align: center;">
@@ -48,10 +46,10 @@ Tested: April 15, 2020; Passed with no problems.
 	</div>
 
     <div data-role="popup" id="instructionPopup" data-dismissible="false" class="ui-content">
-		<p>Welcome to Soundz, to listen to music, press the "Soundz" tab on the bottom left. To add and view your favorite songs
+		<p> Welcome to Soundz, to listen to music, press the "Soundz" tab on the bottom left. To add and view your favorite songs
             click on the "Favorites" tab. To watch vides of your favorite artists, visit the Video page by clicking on the "Video" 
             tab. "Tours" tab will provide tour dates and locations. Want to sing-along? Click on the "Lyrics" on the bottom right 
-            to see song lyrics. Have questions or comments? You can reach us by click on the mail icon on top left of this application.
+            to see song lyrics. Have questions or comments? You can reach us by click on the mail icon on the top left of this application.
             If you would like to learn more about us, click on the "i" icon on the top right. You can come back to the home page from
             any page other than the home page by clicking on the home icon in the footer of this application.
         </p>
@@ -255,8 +253,39 @@ Tested: April 15, 2020; Passed with no problems.
 		<!-- #5 Page Link added, #7 Transition added -->
 		<a href="#about" class="ui-btn ui-shadow ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-b ui-btn-inline">About</a>
     </div><!-- /header -->
-	<div role="main" class="ui-content">
-		<p>Lyrics</p>
+	<div role="main" class="ui-content" data-filter="true">
+        <div data-role = "collapsible">
+            <h1>Eminem<span class="ui-li-count">3</span></h1>
+            <div data-role = "collapsible">
+               <h1>lose yourself</h1>
+               <p>lose yourself lyrics</p>
+            </div>
+            <div data-role = "collapsible">
+                <h1>godzilla</h1>
+                <p>this godzilla lyrics</p>
+             </div>
+             <div data-role = "collapsible">
+                <h1>stan</h1>
+                <p>stan lyrics</p>
+             </div>
+         </div>
+         <div data-role = "collapsible">
+            <h1>Billie Eilish<span class="ui-li-count">1</span></h1>
+            <div data-role = "collapsible">
+               <h1>Everything I Wanted</h1>
+               <p>Everything i wanted lyrics</p>
+            </div>
+            </div>
+            <div data-role = "collapsible">
+                <h1>Lady Gaga<span class="ui-li-count">2</span></h1>
+                <div data-role = "collapsible">
+                   <h1>Poker Face</h1>
+                   <p>poker face lyrics</p>
+                </div>
+                <div data-role = "collapsible">
+                    <h1>Stupid Love</h1>
+                    <p>stupid love lyrics</p>
+                 </div>
 	</div><!-- /content -->
 
     <div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">
