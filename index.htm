@@ -18,6 +18,7 @@ Tested: April 15, 2020; Passed with no problems.
 <script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/favs.js"></script>
 
 </head>
 
@@ -35,8 +36,27 @@ Tested: April 15, 2020; Passed with no problems.
         <div style="text-align: center;">
             <img src="images/SoundzLogo.png" height="150" width="200">
         </div>
-        
-	</div><!-- /content -->
+        <p>
+            Soundz has music for every occasion, for everyone. Start listening now by pressing the “Soundz” tab below. 
+        </p>
+        <p>
+            Need help getting around? Press the "How to get around" button 
+        </p>
+        <!--#7 week 8, Popup Widget-->
+		<a href="#instructionPopup" data-role="button" 
+		data-rel="popup" data-position-to="window">How To Get Around</a>
+	</div>
+
+    <div data-role="popup" id="instructionPopup" data-dismissible="false" class="ui-content">
+		<p>Welcome to Soundz, to listen to music, press the "Soundz" tab on the bottom left. To add and view your favorite songs
+            click on the "Favorites" tab. To watch vides of your favorite artists, visit the Video page by clicking on the "Video" 
+            tab. "Tours" tab will provide tour dates and locations. Want to sing-along? Click on the "Lyrics" on the bottom right 
+            to see song lyrics. Have questions or comments? You can reach by click on the mail icon on top left of this application.
+            If you would like to learn more about us, click on the "i" icon on the top right. You can come back to the home page from
+            any page by clicking on the home icon in the footer of this application.
+        </p>
+		<a href="" data-rel="back" data-theme="b" data-role="button">Back to Soundz</a>
+	</div>
 
     <div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">
 		<div data-role="navbar">
@@ -118,7 +138,30 @@ Tested: April 15, 2020; Passed with no problems.
 		<a href="#about" class="ui-btn ui-shadow ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-b ui-btn-inline">About</a>
     </div><!-- /header -->
 	<div role="main" class="ui-content">
-		<p>My favs</p>
+        <p>My favs</p>
+        <!--add favs-->
+        <div role="main" class="ui-content">
+			<form>
+				<div class="ui-field-contain">
+					<input id="title" type="text" placeholder="Artist"/>
+				</div>
+				<div class="ui-field-contain">
+					<textarea id="note" placeholder="Song"></textarea>
+				</div>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<input id="btnNoThanks" type="submit" value="Cancel"/>
+					</div>
+					<div class="ui-block-b">
+						<input id="btnAddNote" type="button" value="Save">
+					</div>
+				</div>
+			</form>
+			</div>
+        <!--view favs-->
+            <!--week 9, display notes listview-->
+            <ul id="notesList" data-role="listview" data-inset="true"></ul>
+       
 	</div><!-- /content -->
 
     <div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">
