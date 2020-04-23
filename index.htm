@@ -26,9 +26,9 @@ Tested: April 15, 2020; Passed with no problems.
 <div data-role="page" id="home">
 
 	<div data-role="header">
-        <a href="#contact" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-notext ui-btn-b ui-btn-inline" data-transition="slide">Mail</a>
+        <a href="#contact" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-notext ui-btn-b ui-btn-inline" data-transition="pop">Mail</a>
 		<h1>Home</h1>
-		<a href="#about" class="ui-btn ui-shadow ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-b ui-btn-inline" data-transition="slide">About</a>
+		<a href="#about" class="ui-btn ui-shadow ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-b ui-btn-inline" data-transition="pop">About</a>
     </div><!-- /header -->
 	<div role="main" class="ui-content">
         <div style="text-align: center;">
@@ -60,11 +60,11 @@ Tested: April 15, 2020; Passed with no problems.
 		<div data-role="navbar">
 			<ul>
 				<!-- #5 Page Link added, #6 Pre-Fetching added, #7 Transition added -->
-                <li><a href="#library" rel="external" data-icon="audio" data-prefetch="true" data-transition="slide">Soundz</a></li>
-                <li><a href="#favorites" rel="external" data-icon="heart" data-prefetch="true" data-transition="slide">Favorites</a></li>
-                <li><a href="#videos" rel="external" data-icon="video" data-prefetch="true" data-transition="slide">Video</a></li>
-                <li><a href="#tours" rel="external" data-icon="calendar" data-prefetch="true" data-transition="slide">Tours</a></li>
-			    <li><a href="#lyrics" rel="external" data-icon="edit" data-prefetch="true" data-transition="slide">Lyrics</a></li>
+                <li><a href="#library" rel="external" data-icon="audio" data-prefetch="true" data-transition="pop">Soundz</a></li>
+                <li><a href="#favorites" rel="external" data-icon="heart" data-prefetch="true" data-transition="pop">Favorites</a></li>
+                <li><a href="#videos" rel="external" data-icon="video" data-prefetch="true" data-transition="pop">Video</a></li>
+                <li><a href="#tours" rel="external" data-icon="calendar" data-prefetch="true" data-transition="pop">Tours</a></li>
+			    <li><a href="#lyrics" rel="external" data-icon="edit" data-prefetch="true" data-transition="pop">Lyrics</a></li>
 			</ul>
 		</div>
     <h4>Soundz &copy; 2020</h4>
@@ -188,6 +188,19 @@ Tested: April 15, 2020; Passed with no problems.
     </div><!-- /header -->
 	<div role="main" class="ui-content">
         <p>My videos</p>
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+            <p>
+                1.Eminem - Godzilla feat JuiceWrld
+            </p>
+        </div>
+        <div class="ui-block-b">
+            <p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/r_0JjYUe5jo" frameborder="0" 
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+        </div>
+    </div>
         <div data-role="collapsible">
             <h3>Eminem - Godzilla</h3>
     
@@ -285,6 +298,7 @@ Tested: April 15, 2020; Passed with no problems.
                 <div data-role = "collapsible">
                     <h1>Stupid Love</h1>
                     <p>stupid love lyrics</p>
+                 </div>
                  </div>
 	</div><!-- /content -->
 
