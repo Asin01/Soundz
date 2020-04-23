@@ -179,6 +179,7 @@ Tested: April 15, 2020; Passed with no problems.
 
 <!-- Start of Videos page -->
 <div data-role="page" id="videos">
+    
 
 	<div data-role="header">
         <a href="#contact" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-notext ui-btn-b ui-btn-inline" data-transition="slide">Mail</a>
@@ -187,18 +188,15 @@ Tested: April 15, 2020; Passed with no problems.
 		<a href="#about" class="ui-btn ui-shadow ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-b ui-btn-inline">About</a>
     </div><!-- /header -->
 	<div role="main" class="ui-content">
-        
-
-        <a href="#videoPopup" data-role="button" 
-		data-rel="popup" data-position-to="window">Eminem</a>
-	</div>
-
-    <div data-role="popup" id="videoPopup" data-dismissible="false" class="ui-content">
-		<p> 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/r_0JjYUe5jo" frameborder="0" 
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-        </p>
-		<a href="" data-rel="back" data-theme="b" data-role="button">Close Video</a>
+        <a href="#videoPop" data-rel="popup" data-position-to="window"
+        data-role="button" data-theme="a" data-inline="true">Open Video Player</a>
+        <!-- Video Player -->
+        <div data-role="popup" id="videoPop" data-overlay-theme="b" data-theme="a"
+        data-tolerance="20,20" class="ui-content">  
+           
+   <iframe src="https://www.youtube.com/embed/r_0JjYUe5jo" 
+           width="500" height="300" seamless></iframe>  <!-- video iframe -->
+       </div>
         
 	</div><!-- /content -->
 
