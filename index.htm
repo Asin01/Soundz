@@ -54,7 +54,7 @@ Tested: April 15, 2020; Passed with no problems.
             any page other than the home page by clicking on the home icon in the footer of this application.
         </p>
 		<a href="" data-rel="back" data-theme="b" data-role="button">Back to Soundz</a>
-	</div>
+    </div>
 
     <div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">
 		<div data-role="navbar">
@@ -938,7 +938,7 @@ Tested: April 15, 2020; Passed with no problems.
 				<label for="message">Message:</label>
 				<textarea name="message" id="message"></textarea>
             </div>
-            <fieldset data-role="controlgroup" data-type="horizontal">
+            <fieldset data-role="controlgroup">
                 <legend>Rate Soundz:</legend>
                 <input type="checkbox" name="rateus" id="rate1" value="Hate">
                 <label for="rate1">Hate</label>
@@ -950,7 +950,19 @@ Tested: April 15, 2020; Passed with no problems.
 			<div class="ui-field-contain">
 				<input type="submit" name="submit" value="Send Message"/>
 			</div>
-		</form>
+        </form>
+        
+        <div data-role="panel" id="leftPanel" data-display="overlay">
+            <p><a href="https://www.facebook.com/amir.a.sinanovic"><img src="images/fb.png"></a></p>
+            <p><a href="https://www.instagram.com"><img src="images/ig.png"></a></p>
+            <p><a href="https://www.twitter.com"><img src="images/twitter.png"></a></p>
+            <p><a href="https://www.instagram.com"><img src="images/youtube.png"></a></p>
+			<p>
+				<a data-role="button" data-rel="close">Close</a>
+			</p>
+	
+        </div>
+        <a href="#leftPanel" data-role="button">Social Media</a>
 	</div><!-- /content -->
 
     <div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">
