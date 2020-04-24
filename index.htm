@@ -310,8 +310,8 @@ Tested: April 15, 2020; Passed with no problems.
                <br>
             </div>
         </div>
-	</div><!-- /content -->
-
+    </div><!-- /content -->
+    
     <div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">
 		<div data-role="navbar">
 			<ul>
@@ -920,7 +920,37 @@ Tested: April 15, 2020; Passed with no problems.
 		<a href="#about" class="ui-btn ui-shadow ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-b ui-btn-inline">About</a>
     </div><!-- /header -->
 	<div role="main" class="ui-content">
-		<p>Contact Us</p>
+        
+        <form action="#contact" method="post">
+			<div class="ui-field-contain">
+				<label for="name">Name:</label>
+				<input type="text" name="name" id="name" value=""/>
+			</div>
+			<div class="ui-field-contain">
+				<label for="email">Email:</label>
+				<input type="text" name="email" id="email" value=""/>
+            </div>
+            <div class="ui-field-contain">
+				<label for="email">Subject:</label>
+				<input type="text" name="subject" id="subject" value=""/>
+			</div>
+			<div>
+				<label for="message">Message:</label>
+				<textarea name="message" id="message"></textarea>
+            </div>
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <legend>Rate Soundz:</legend>
+                <input type="checkbox" name="rateus" id="rate1" value="Hate">
+                <label for="rate1">Hate</label>
+                <input type="checkbox" name="rateus" id="rate2" value="Ok">
+                <label for="rate2">OK</label>
+                <input type="checkbox" name="rateus" id="rate3" value="Love">
+                <label for="rate3">Love</label>
+            </fieldset>
+			<div class="ui-field-contain">
+				<input type="submit" name="submit" value="Send Message"/>
+			</div>
+		</form>
 	</div><!-- /content -->
 
     <div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">
