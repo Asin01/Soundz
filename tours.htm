@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--*****************************************************************************
+Title: Soundz
+Use: Tours page for the Soundz app
+Author: Amir Sinanovic
+School/Term: SIU Carbondale, Spring 2020
+Developed: April 15, 2020
+Tested: April 27, 2020; Passed with no problems.
+******************************************************************************-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tours</title>
+<link rel="stylesheet" href="css/themes/soundz.min.css" />
+<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <!-- Start of Tours page -->
+<div data-role="page" id="tours" data-title="Tours Page">
+
+	<div data-role="header">
+        <!--Specific Requirement c)Pre-fetch content d)page transition-->
+        <a href="contact.htm" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-notext ui-btn-b ui-btn-inline" data-prefetch="true" data-transition="pop">Mail</a>
+		<h1>Tours</h1>
+        <!--Specific Requirement c)Pre-fetch content d)page transition-->
+		<a href="about.htm" class="ui-btn ui-shadow ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-b ui-btn-inline" data-prefetch="true" data-transition="pop">About</a>
+    </div><!-- /header -->
+	<div role="main" class="ui-content">
+        <!--Specific Requirement i)Grid widget-->
+        <div class="ui-grid-a">
+            <div class="ui-block-a">
+                <p>
+                    <img src="images/covers/pink.jpg" width="100" height="100">
+                </p>
+            </div>
+            <div class="ui-block-b">
+               <h2>Pink</h2>
+               <h3>Category:Pop Music/Soft Rock</h3>
+               <br>
+               <p>
+                   Date: December 12, 2020
+               </p>
+               <p>
+                   Location: Alamodome - San Antonio, TX
+               </p>
+               <a href="https://www1.ticketmaster.com/concert-for-peace/event/3A005779D8A75791">Tickets</a>
+               <br>
+               <br>
+            </div>
+            <div class="ui-block-a">
+                <p>
+                    <img src="images/covers/metallica.jpg" width="100" height="100">
+                </p>
+            </div>
+            <div class="ui-block-b">
+               <h2>Metallica</h2>
+               <h3>Category:Hard Rock/Heavy Metal</h3>
+               <br>
+               <p>
+                   Date: September 18, 2020
+               </p>
+               <p>
+                   Location: Highland Festival Grounds at Kentucky Expo Center · Louisville, KY, US
+               </p>
+               <a href="https://louderthanlife.frontgatetickets.com/?irgwc=1&clickid=xWASm%3AUiQxyOWH%3AwUx0Mo3chUki2pSTkEQ-BTc0&camefrom=CFC_BUYAT_256979&impradid=256979&REFERRAL_ID=tmfeedbuyat256979&wt.
+                mc_id=aff_BUYAT_256979&utm_source=256979-Pawel%20Golab&impradname=Pawel%20Golab&utm_medium=affiliate">Tickets</a>
+                <br>
+                <p>
+                    Date: October 9, 2020
+                </p>
+                <p>
+                    Location: Discovery Park · Sacramento, CA, US
+                </p>
+                <a href="https://aftershock2020.frontgatetickets.com/?irgwc=1&clickid=xWASm%3AUiQxyOWH%3AwUx0Mo3chUki2pkQYEQ-BTc0&camefrom=CFC_BUYAT_256979&impradid=256979&REFERRAL_ID=tmfeedbuyat256979&wt.
+                mc_id=aff_BUYAT_256979&utm_source=256979-Pawel%20Golab&impradname=Pawel%20Golab&utm_medium=affiliate">Tickets</a>
+                <br>
+                <br>
+            </div>
+            <div class="ui-block-a">
+                <p>
+                    <img src="images/covers/eagles.jpg" width="100" height="100">
+                </p>
+            </div>
+            <div class="ui-block-b">
+               <h2>Eagles</h2>
+               <h3>Category:Pop Music/Soft Rock</h3>
+               <br>
+               <p>
+                   Date: September 18, 2020
+               </p>
+               <p>
+                   Location: Pepsi Center · Denver, CO, US
+               </p>
+               <a href="https://www1.ticketmaster.com/eagles-denver-colorado-03-26-2020/event/1E005751F9E7AF06?irgwc=1&clickid=xWASm%253AUiQxyOWH%253AwUx0Mo3chUki2os3oES2ezM0&camefrom=CFC_BUYAT_
+               256979&impradid=256979&REFERRAL_ID=tmfeedbuyat256979&wt.mc_id=aff_BUYAT_256979&utm_source=256979-Pawel%2520Golab&impradname=Pawel%2520Golab&utm_medium=affiliate">Tickets</a>
+               <br>
+               <br>
+            </div>
+        </div>
+    </div><!-- /content -->
+    
+    <div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">
+		<div data-role="navbar">
+			<ul>
+                <li><a href="index.htm" rel="external" data-icon="audio" data-prefetch="true" data-transition="pop">Soundz</a></li>
+                <li><a href="favorites.htm" rel="external" data-icon="heart" data-prefetch="true" data-transition="pop">Favorites</a></li>
+                <li><a href="videos.htm" rel="external" data-icon="video" data-prefetch="true" data-transition="pop">Video</a></li>
+                <li><a href="tours.htm" rel="external" data-icon="calendar" data-prefetch="true" data-transition="pop" class="ui-btn-active">Tours</a></li>
+			    <li><a href="lyrics.htm" rel="external" data-icon="edit" data-prefetch="true" data-transition="pop">Lyrics</a></li>
+			</ul>
+		</div>
+        <h4><a href="index.htm" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext ui-btn-b ui-btn-inline" data-prefetch="true" data-transition="pop">Home</a>Soundz &copy; 2020</h4>
+    </div>
+</div><!-- /page -->
+
+</body>
+</html>

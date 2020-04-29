@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--*****************************************************************************
+Title: Soundz
+Use: Favorites Page for the Soundz app
+Author: Amir Sinanovic
+School/Term: SIU Carbondale, Spring 2020
+Developed: April 15, 2020
+Tested: April 27, 2020; Passed with no problems.
+******************************************************************************-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Favorites</title>
+<link rel="stylesheet" href="css/themes/soundz.min.css" />
+<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/favs.js"></script>
+</head>
+<body>
+    <!-- Start of Favorites page -->
+<div data-role="page" id="favorites" data-title="Favorites Page">
+
+	<div data-role="header">
+        <!--Specific Requirement c)Pre-fetch content d)page transition-->
+        <a href="contact.htm" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-notext ui-btn-b ui-btn-inline" data-prefetch="true" data-transition="pop">Mail</a>
+		<h1>Favorites</h1>
+		<!--Specific Requirement c)Pre-fetch content d)page transition-->
+		<a href="about.htm" class="ui-btn ui-shadow ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-b ui-btn-inline" data-prefetch="true" data-transition="pop">About</a>
+    </div><!-- /header -->
+	<div role="main" class="ui-content">
+        <!--Specific Requirement j)use of local storage-->
+        <!--add favs-->
+        <div role="main" class="ui-content">
+			<form>
+				<div class="ui-field-contain">
+					<input id="title" type="text" placeholder="Artist"/>
+				</div>
+				<div class="ui-field-contain">
+					<textarea id="note" placeholder="Song"></textarea>
+				</div>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<input id="btnNoThanks" type="submit" value="Cancel"/>
+					</div>
+					<div class="ui-block-b">
+						<input id="btnAddNote" type="button" value="Save">
+					</div>
+				</div>
+			</form>
+			</div>
+        <!--view favs-->
+            
+            <ul id="notesList" data-role="listview" data-inset="true"></ul>
+       
+	</div><!-- /content -->
+
+    <div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">
+		<div data-role="navbar">
+			<ul>	
+                <li><a href="soundz.htm" rel="external" data-icon="audio" data-prefetch="true" data-transition="pop" data-prefetch="true" data-transition="pop">Soundz</a></li>
+                <li><a href="favorites.htm" rel="external" data-icon="heart" data-prefetch="true" data-transition="pop" class="ui-btn-active" data-prefetch="true" data-transition="pop">Favorites</a></li>
+                <li><a href="videos.htm" rel="external" data-icon="video" data-prefetch="true" data-transition="pop" data-prefetch="true" data-transition="pop">Video</a></li>
+                <li><a href="tours.htm" rel="external" data-icon="calendar" data-prefetch="true" data-transition="pop" data-prefetch="true" data-transition="pop">Tours</a></li>
+			    <li><a href="lyrics.htm" rel="external" data-icon="edit" data-prefetch="true" data-transition="pop" data-prefetch="true" data-transition="pop">Lyrics</a></li>
+			</ul>
+		</div>
+        <h4><a href="index.htm" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext ui-btn-b ui-btn-inline" data-prefetch="true" data-transition="pop">Home</a>Soundz &copy; 2020</h4>
+    </div>
+</div><!-- /page -->
+</body>
+</html>

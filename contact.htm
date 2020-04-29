@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--*****************************************************************************
+Title: Soundz
+Use: Contact page of the Soundz app
+Author: Amir Sinanovic
+School/Term: SIU Carbondale, Spring 2020
+Developed: April 15, 2020
+Tested: April 27, 2020; Passed with no problems.
+******************************************************************************-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact</title>
+<link rel="stylesheet" href="css/themes/soundz.min.css" />
+<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <!-- Start of Contact page -->
+<div data-role="page" id="contact" data-title="Contact Page">
+
+	<div data-role="header">
+        <!--Specific Requirement c)Pre-fetch content d)page transition-->
+        <a href="contact.htm" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-notext ui-btn-b ui-btn-inline"  data-prefetch="true" data-transition="pop" class="ui-btn-active">Mail</a>
+		<h1>Contact</h1>
+		<!--Specific Requirement c)Pre-fetch content d)page transition-->
+		<a href="about.htm" class="ui-btn ui-shadow ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-b ui-btn-inline" data-prefetch="true" data-transition="pop" >About</a>
+    </div><!-- /header -->
+	<div role="main" class="ui-content">
+        <!--Specific Requirement h)form with text, textarea, checkbox-->
+        <form action="#contact" method="post">
+			<div class="ui-field-contain">
+				<label for="name">Name:</label>
+				<input type="text" name="name" id="name" value=""/>
+			</div>
+			<div class="ui-field-contain">
+				<label for="email">Email:</label>
+				<input type="text" name="email" id="email" value=""/>
+            </div>
+            <div class="ui-field-contain">
+				<label for="email">Subject:</label>
+				<input type="text" name="subject" id="subject" value=""/>
+			</div>
+			<div>
+				<label for="message">Message:</label>
+				<textarea name="message" id="message"></textarea>
+            </div>
+            <fieldset data-role="controlgroup">
+                <legend>Rate Soundz:</legend>
+                <input type="checkbox" name="rateus" id="rate1" value="Hate">
+                <label for="rate1">Hate</label>
+                <input type="checkbox" name="rateus" id="rate2" value="Ok">
+                <label for="rate2">OK</label>
+                <input type="checkbox" name="rateus" id="rate3" value="Love">
+                <label for="rate3">Love</label>
+            </fieldset>
+			<div class="ui-field-contain">
+				<input type="submit" name="submit" value="Send Message"/>
+			</div>
+        </form>
+        <!--Specific Requirement i)Panel widget-->
+        <div data-role="panel" id="leftPanel" data-display="overlay">
+            <p><a href="https://www.facebook.com"><img src="images/fb.png"></a></p>
+            <p><a href="https://www.instagram.com"><img src="images/ig.png"></a></p>
+            <p><a href="https://www.twitter.com"><img src="images/twitter.png"></a></p>
+            <p><a href="https://www.instagram.com"><img src="images/youtube.png"></a></p>
+			<p>
+				<a data-role="button" data-rel="close">Close</a>
+			</p>
+	
+        </div>
+        <!--Specific Requirement f) button use-->
+        <a href="#leftPanel" data-role="button">Social Media</a>
+	</div><!-- /content -->
+
+    <div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">
+		<div data-role="navbar">
+			<ul>
+                <li><a href="soundz.htm" rel="external" data-icon="audio" data-prefetch="true" data-transition="pop">Soundz</a></li>
+                <li><a href="favorites.htm" rel="external" data-icon="heart" data-prefetch="true" data-transition="pop">Favorites</a></li>
+                <li><a href="videos.htm" rel="external" data-icon="video" data-prefetch="true" data-transition="pop">Video</a></li>
+                <li><a href="tours.htm" rel="external" data-icon="calendar" data-prefetch="true" data-transition="pop">Tours</a></li>
+			    <li><a href="lyrics.htm" rel="external" data-icon="edit" data-prefetch="true" data-transition="pop">Lyrics</a></li>
+			</ul>
+		</div>
+        <h4><a href="index.htm" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext ui-btn-b ui-btn-inline" data-prefetch="true" data-transition="pop">Home</a>Soundz &copy; 2020</h4>
+    </div>
+</div><!-- /page -->
+</body>
+</html>

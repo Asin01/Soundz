@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--*****************************************************************************
+Title: Soundz
+Use: Soundz page of the Soundz app
+Author: Amir Sinanovic
+School/Term: SIU Carbondale, Spring 2020
+Developed: April 15, 2020
+Tested: April 27, 2020; Passed with no problems.
+******************************************************************************-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soundz</title>
+<link rel="stylesheet" href="css/themes/soundz.min.css" />
+<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<link href="css/player.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- Start of Soundz page -->
+<div data-role="page" id="soundz" data-title="Sounds Page">
+
+	<div data-role="header">
+        <!--Specific Requirement c)Pre-fetch content d)page transition-->
+        <a href="contact.htm" class="ui-btn ui-shadow ui-corner-all ui-icon-mail ui-btn-icon-notext ui-btn-b ui-btn-inline" data-prefetch="true" data-transition="pop">Mail</a>
+		<h1>Soundz</h1>
+		<!--Specific Requirement c)Pre-fetch content d)page transition-->
+		<a href="about.htm" class="ui-btn ui-shadow ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-b ui-btn-inline" data-prefetch="true" data-transition="pop">About</a>
+    </div><!-- /header -->
+<div role="main" class="ui-content">
+        <div id="container">
+          <div id="audio-image"> <img class="cover"> </div>
+          <div id="audio-player">
+            <div id="audio-info"> <span class="artist"></span> - <span class="title"></span> </div>
+            
+            <div id="buttons"> <span>
+              <button id="prev"></button>
+              <button id="play"></button>
+              <button id="pause"></button>
+              <button id="stop"></button>
+              <button id="next"></button>
+              </span> </div>
+            <div class="clearfix"></div>
+            <div id="tracker">
+              <div id="progress-bar"> <span id="progress"></span> </div>
+              <span id="duration">0:00</span> </div>
+            <div class="clearfix"></div>
+            <ul id="playlist" class="hidden">
+              <li song="Godzilla Ft_Juice_WRLD.mp3" cover="Eminem-cover.jpg" artist="Eminem">Godzilla ft. JuiceWRLD</li>
+              <li song="Stupid_Love.mp3" cover="Lady-Gaga.jpg" artist="Lady Gaga">Stupid Love</li>
+              <li song="Everything_I_Wanted.mp3" cover="Billie-Eilish.jpg" artist="Billie Eilish">Everything I Wanted</li>
+              <li song="Yummy.mp3" cover="yummy.png" artist="Justin Bieber">Yummy</li>
+              <li song="Physical.mp3" cover="Dua-Lipa.jpg" artist="Dua Lipa">Physical</li>
+            </ul>
+          </div>
+        </div>
+        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="js/player.js"></script>
+
+        <div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="soundz.htm" rel="external" data-icon="audio" data-prefetch="true" data-transition="pop" class="ui-btn-active">Soundz</a></li>
+                    <li><a href="favorites.htm" rel="external" data-icon="heart" data-prefetch="true" data-transition="pop">Favorites</a></li>
+                    <li><a href="videos.htm" rel="external" data-icon="video" data-prefetch="true" data-transition="pop">Video</a></li>
+                    <li><a href="tours.htm" rel="external" data-icon="calendar" data-prefetch="true" data-transition="pop">Tours</a></li>
+                    <li><a href="lyrics.htm" rel="external" data-icon="edit" data-prefetch="true" data-transition="pop">Lyrics</a></li>
+                </ul>
+            </div>
+    <h4><a href="index.htm" class="ui-btn ui-shadow ui-corner-all ui-icon-home ui-btn-icon-notext ui-btn-b ui-btn-inline" data-prefetch="true" data-transition="pop">Home</a>Soundz &copy; 2020</h4>
+    </div>
+</div>
+</div><!-- /page -->
+</body>
+</html>
