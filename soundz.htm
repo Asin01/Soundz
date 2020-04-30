@@ -30,34 +30,24 @@ Tested: April 27, 2020; Passed with no problems.
 		<a href="about.htm" class="ui-btn ui-shadow ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-b ui-btn-inline" data-prefetch="true" data-transition="pop">About</a>
     </div><!-- /header -->
 <div role="main" class="ui-content">
-        <div id="container">
-          <div id="audio-image"> <img class="cover"> </div>
-          <div id="audio-player">
-            <div id="audio-info"> <span class="artist"></span> - <span class="title"></span> </div>
-            
-            <div id="buttons"> <span>
-              <button id="prev"></button>
-              <button id="play"></button>
-              <button id="pause"></button>
-              <button id="stop"></button>
-              <button id="next"></button>
-              </span> </div>
-            <div class="clearfix"></div>
-            <div id="tracker">
-              <div id="progress-bar"> <span id="progress"></span> </div>
-              <span id="duration">0:00</span> </div>
-            <div class="clearfix"></div>
-            <ul id="playlist" class="hidden">
-              <li song="Godzilla Ft_Juice_WRLD.mp3" cover="Eminem-cover.jpg" artist="Eminem">Godzilla ft. JuiceWRLD</li>
-              <li song="Stupid_Love.mp3" cover="Lady-Gaga.jpg" artist="Lady Gaga">Stupid Love</li>
-              <li song="Everything_I_Wanted.mp3" cover="Billie-Eilish.jpg" artist="Billie Eilish">Everything I Wanted</li>
-              <li song="Yummy.mp3" cover="yummy.png" artist="Justin Bieber">Yummy</li>
-              <li song="Physical.mp3" cover="Dua-Lipa.jpg" artist="Dua Lipa">Physical</li>
-            </ul>
-          </div>
-        </div>
-        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-        <script src="js/player.js"></script>
+
+  <ul data-role="listview" data-inset="true">
+    <li data-role="list-divider">Hip-Hop</li>
+    <h3>Eminem-Godzilla</h3>
+    <li><audio controls><source src="media/Godzilla Ft_Juice_WRLD.mp3"></audio></li>
+    <h3>Eminem-Godzilla</h3>
+    <li><audio controls><source src="media/Godzilla Ft_Juice_WRLD.mp3"></audio></li>
+    <li data-role="list-divider">Rock</li>
+    <li>Rock Song</li>
+
+    </ul>
+
+</div>
+
+
+<div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">
+  <div data-role="navbar">
+    <ul>
 
         <div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">
             <div data-role="navbar">

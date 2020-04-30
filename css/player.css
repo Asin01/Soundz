@@ -1,4 +1,11 @@
-
+/******************************************************************************
+Title: Soundz
+Use: CSS for Audio Player on Soundz page
+Author: Amir Sinanovic
+School/Term: SIU Carbondale, Spring 2020
+Developed: April 15, 2020
+Tested: April 27, 2020; Passed with no problems.
+******************************************************************************/
 * {
   margin: 0;
   padding: 0;
@@ -138,8 +145,4 @@ text-shadow: none; }
   font-weight: bold;
   color:#1db954;
   text-shadow: none;
-}
-#footernav h6 {
-  margin-bottom: 0px;
-  border-bottom: 0px;
 }

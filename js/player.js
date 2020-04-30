@@ -1,3 +1,11 @@
+/******************************************************************************
+Title: Soundz
+Use: Javascript for Audio Player
+Author: Amir Sinanovic
+School/Term: SIU Carbondale, Spring 2020
+Developed: April 15, 2020
+Tested: April 27, 2020; Passed with no problems.
+******************************************************************************/
 var audio;
 
 //Hide Pause
@@ -85,7 +93,7 @@ $('#playlist li').click(function(){
 //Time/Duration
 function showDuration(){
 	$(audio).bind('timeupdate',function(){
-		//Get hours and minutes
+		
 		var s = parseInt(audio.currentTime % 60);
 		var m = parseInt(audio.currentTime / 60) % 60;
 		if(s < 10){
