@@ -15,12 +15,12 @@ $(function(){
 	(function(app){
 
 		// variable definitions go here
-		var $title = $('#title'),
-			$note = $('#note'),
-			$ul = $('#notesList'),
+		var $artist = $('#artist'),
+			$song = $('#song'),
+			$ul = $('#songlist'),
 			li = '<li><a href="#pgNotesDetail?title=LINK">ID</a></li>',
-			notesHdr = '<li data-role="list-divider">Your Notes</li>',
-			noNotes = '<li id="noNotes">You have no notes</li>';
+			notesHdr = '<li data-role="list-divider">Your Song List</li>',
+			noNotes = '<li id="noNotes">No songs added</li>';
 
 		app.init = function(){
 			app.bindings();
@@ -33,11 +33,11 @@ $(function(){
 				e.preventDefault();
 				// save the note
 				app.addNote(
-					$('#title').val(),
-					$('#note').val()
+					$('#artist').val(),
+					$('#song').val()
 				);
 			});
-			$(document).on('touchend', '#notesList a', function(e){
+			$(document).on('touchend', '#songlist a', function(e){
 				e.preventDefault();
 				var href = $(this)[0].href.match(/\?.*$/)[0];
 				var title = href.replace(/^\?title=/,'');
@@ -60,16 +60,16 @@ $(function(){
 								'<h1>Notekeeper</h1>',
 								'<a id="btnDelete" href="" data-href="ID" data-role="button" class="ui-btn-right">Delete</a>',
 							'</div>',
-							'<div role="main" class="ui-content"><h3>TITLE</h3><p>NOTE</p></div>',
+							'<div role="main" class="ui-content"><h3>ARTIST</h3><p>SONG</p></div>',
 						'</div>'].join('');
 			var newPage = $(page);
 			//append it to the page container
 			newPage.html(function(index,old){
 				return old
 						.replace(/ID/g,title)
-						.replace(/TITLE/g,title
+						.replace(/ARTIST/g,title
 						.replace(/-/g,' '))
-						.replace(/NOTE/g,note);
+						.replace(/SONG/g,note);
 			}).appendTo($.mobile.pageContainer);
 			$.mobile.changePage(newPage);
 		};
