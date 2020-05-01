@@ -4,7 +4,7 @@ Use: Javascript for Favorites Page Local Storage
 Author: Amir Sinanovic
 School/Term: SIU Carbondale, Spring 2020
 Developed: April 15, 2020
-Tested: April 27, 2020; Passed with no problems.
+Tested: April 30, 2020; Passed with no problems.
 ******************************************************************************/
 
 $(function(){
@@ -37,7 +37,7 @@ $(function(){
 					$('#note').val()
 				);
 			});
-			$(document).on('touchend', '#notesList a', function(e){
+			$(document).on('touchend', '#notesList', function(e){
 				e.preventDefault();
 				var href = $(this)[0].href.match(/\?.*$/)[0];
 				var title = href.replace(/^\?title=/,'');
