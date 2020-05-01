@@ -7,7 +7,7 @@ Use: About Page of the Soundz app
 Author: Amir Sinanovic
 School/Term: SIU Carbondale, Spring 2020
 Developed: April 15, 2020
-Tested: April 27, 2020; Passed with no problems.
+Tested: April 30, 2020; Passed with no problems.
 ******************************************************************************-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About</title>
@@ -29,7 +29,21 @@ Tested: April 27, 2020; Passed with no problems.
 		<a href="about.htm" class="ui-btn ui-shadow ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-b ui-btn-inline" data-prefetch="true" data-transition="pop" class="ui-btn-active">About</a>
     </div><!-- /header -->
 	<div role="main" class="ui-content">
-		<p>About SOUNDZ</p>
+		<div data-role="tabs">
+			<div data-role="navbar">
+			<ul>
+				<li><a href="#tab1">About Developer</a></li>
+				<li><a href="#tab2">About Soundz</a></li>
+			</ul>
+			</div>
+			<div id="tab1">
+				<p>Hi I'm Amir...</p>
+			</div>
+
+			<div id="tab2">
+				<p>Soundz is...</p>
+			</div>
+			</div>
 	</div><!-- /content -->
 
     <div data-role="footer" data-position="fixed" data-id="footernav" data-theme="a">

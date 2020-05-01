@@ -7,7 +7,7 @@ Use: Contact page of the Soundz app
 Author: Amir Sinanovic
 School/Term: SIU Carbondale, Spring 2020
 Developed: April 15, 2020
-Tested: April 27, 2020; Passed with no problems.
+Tested: April 30, 2020; Passed with no problems.
 ******************************************************************************-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact</title>
@@ -47,15 +47,31 @@ Tested: April 27, 2020; Passed with no problems.
 				<label for="message">Message:</label>
 				<textarea name="message" id="message"></textarea>
             </div>
+            <!--Specific Requirement h)Select Menu-->
+            <div class="ui-field-contain">
+                <label for="favgenre">Favorite Music Genre:</label>
+                <select name="favgenre" id="favgenre">
+                    <option value="Hip-Hop">Hip-Hop</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Country">Country</option>
+                    <option value="Reggae">Reggae</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Heavy Metal">Heavy Metal</option>
+                </select>
+            </div>
             <div class="ui-field-contain">
 				<label for="rating">Rate Soundz:</label>
 				<input type="range" name="rating" id="rating" 
 				min="0" max="5" value="5" data-highlight="true">
 			</div>	
 			<div class="ui-field-contain">
-				<input type="submit" name="submit" value="Send Message"/>
+                <a href="#popSubmit" data-rel="popup" class="ui-btn" data-transition="pop">Send Message</a>
 			</div>
         </form>
+        <div data-role="popup" id="popSubmit">
+            <p>Thanks, your message was sent!</p>
+        </div>
         <!--Specific Requirement i)Panel widget-->
         <div data-role="panel" id="leftPanel" data-display="overlay">
             <p><a href="https://www.facebook.com"><img src="images/fb.png"></a></p>
