@@ -4,7 +4,7 @@ Use: Javascript for Favorites Page Local Storage
 Author: Amir Sinanovic
 School/Term: SIU Carbondale, Spring 2020
 Developed: April 15, 2020
-Tested: April 30, 2020; Passed with no problems.
+Tested: April 27, 2020; Passed with no problems.
 ******************************************************************************/
 
 $(function(){
