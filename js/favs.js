@@ -19,8 +19,8 @@ $(function(){
 			$note = $('#note'),
 			$ul = $('#notesList'),
 			li = '<li><a href="#pgNotesDetail?title=LINK">ID</a></li>',
-			notesHdr = '<li data-role="list-divider">Your Song List</li>',
-			noNotes = '<li id="noNotes">No songs added</li>';
+			notesHdr = '<li data-role="list-divider">Your Notes</li>',
+			noNotes = '<li id="noNotes">You have no notes</li>';
 
 		app.init = function(){
 			app.bindings();
@@ -37,7 +37,7 @@ $(function(){
 					$('#note').val()
 				);
 			});
-			$(document).on('touchend', '#notesList', function(e){
+			$(document).on('touchend', '#notesList a', function(e){
 				e.preventDefault();
 				var href = $(this)[0].href.match(/\?.*$/)[0];
 				var title = href.replace(/^\?title=/,'');
@@ -120,7 +120,7 @@ $(function(){
 			// write it back to localStorage
 			localStorage['Notekeeper'] = JSON.stringify(notesObj);
 			// return to the list of notes
-			$.mobile.changePage("favorites.htm", {transition : "pop"}, false);
+			$.mobile.changePage('favorites.htm');
 			// restart the storage check
 			app.checkForStorage();
 		};
@@ -141,4 +141,3 @@ $(function(){
 
 	})(Notekeeper);
 });
-  
