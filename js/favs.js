@@ -37,7 +37,7 @@ $(function(){
 					$('#song').val()
 				);
 			});
-			$(document).on('touchend', '#songlist a', function(e){
+			$(document).on('touchend', '#favorites a', function(e){
 				e.preventDefault();
 				var href = $(this)[0].href.match(/\?.*$/)[0];
 				var artist = href.replace(/^\?artist=/,'');
