@@ -19,8 +19,8 @@ $(function(){
 			$song = $('#song'),
 			$ul = $('#songlist'),
 			li = '<li><a href="#pgNotesDetail?artist=LINK">ID</a></li>',
-			notesHdr = '<li data-role="list-divider">Your Song List</li>',
-			noNotes = '<li id="noNotes">No songs added</li>';
+			songsHdr = '<li data-role="list-divider">Your Song List</li>',
+			noSongs = '<li id="noSongs">No songs added</li>';
 
 		app.init = function(){
 			app.bindings();
@@ -109,7 +109,7 @@ $(function(){
 			for (n in notesObj) {
 				html += li.replace(/ID/g,n.replace(/-/g,' ')).replace(/LINK/g,n);
 			}
-			$ul.html(notesHdr + html).listview('refresh');
+			$ul.html(songsHdr + html).listview('refresh');
 		};
 
 		app.deleteNote = function(key){
@@ -133,7 +133,7 @@ $(function(){
 				app.displayNotes();
 			} else {
 				// nope, just show the placeholder
-				$ul.html(notesHdr + noNotes).listview('refresh');
+				$ul.html(songsHdr + noSongs).listview('refresh');
 			}
 		};
 
