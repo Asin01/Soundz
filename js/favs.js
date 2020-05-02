@@ -18,7 +18,7 @@ $(function(){
 		var $artist = $('#artist'),
 			$song = $('#song'),
 			$ul = $('#songlist'),
-			li = '<li><a href="#pgNotesDetail?title=LINK">ID</a></li>',
+			li = '<li><a href="#pgNotesDetail?artist=LINK">ID</a></li>',
 			notesHdr = '<li data-role="list-divider">Your Song List</li>',
 			noNotes = '<li id="noNotes">No songs added</li>';
 
@@ -31,7 +31,7 @@ $(function(){
 			// set up binding for form
 			$('#btnAddNote').on('touchend', function(e){
 				e.preventDefault();
-				// save the note
+				// save the song
 				app.addNote(
 					$('#artist').val(),
 					$('#song').val()
@@ -40,8 +40,8 @@ $(function(){
 			$(document).on('touchend', '#songlist a', function(e){
 				e.preventDefault();
 				var href = $(this)[0].href.match(/\?.*$/)[0];
-				var title = href.replace(/^\?title=/,'');
-				app.loadNote(title);
+				var artist = href.replace(/^\?artist=/,'');
+				app.loadNote(artist);
 			});
 			$(document).on('touchend', '#btnDelete', function(e){
 				e.preventDefault();
@@ -50,11 +50,11 @@ $(function(){
 			});
 		};
 
-		app.loadNote = function(title){
-			// get notes
+		app.loadNote = function(artist){
+			// get songs
 			var notes = app.getNotes(),
-				// lookup specific note
-				note = notes[title],
+				// lookup specific song
+				song = notes[artist],
 				page = ['<div data-role="page">',
 							'<div data-role="header" data-add-back-btn="true">',
 								'<h1>Notekeeper</h1>',
@@ -66,15 +66,15 @@ $(function(){
 			//append it to the page container
 			newPage.html(function(index,old){
 				return old
-						.replace(/ID/g,title)
-						.replace(/ARTIST/g,title
+						.replace(/ID/g,aratist)
+						.replace(/ARTIST/g,artist
 						.replace(/-/g,' '))
-						.replace(/SONG/g,note);
+						.replace(/SONG/g,song);
 			}).appendTo($.mobile.pageContainer);
 			$.mobile.changePage(newPage);
 		};
 
-		app.addNote = function(title, note){
+		app.addNote = function(artist, song){
 			var notes = localStorage['Notekeeper'],
 				notesObj;
 			if (notes === undefined || notes === '') {
@@ -82,17 +82,17 @@ $(function(){
 			} else {
 				notesObj = JSON.parse(notes);
 			}
-			notesObj[title.replace(/ /g,'-')] = note;
+			notesObj[artist.replace(/ /g,'-')] = song;
 			localStorage['Notekeeper'] = JSON.stringify(notesObj);
 			// clear the two form fields
-			$note.val('');
-			$title.val('');
+			$song.val('');
+			$artist.val('');
 			//update the listview
 			app.displayNotes();
 		};
 
 		app.getNotes = function(){
-			// get notes
+			// get songs
 			var notes = localStorage['Notekeeper'];
 			// convert notes from string to object
 			if(notes) return JSON.parse(notes);
@@ -100,12 +100,12 @@ $(function(){
 		};
 
 		app.displayNotes = function(){
-			// get notes
+			// get songs
 			var notesObj = app.getNotes(),
 				// create an empty string to contain html
 				html = '',
 				n; // make sure your iterators are properly scoped
-			// loop over notes
+			// loop over songs
 			for (n in notesObj) {
 				html += li.replace(/ID/g,n.replace(/-/g,' ')).replace(/LINK/g,n);
 			}
@@ -115,11 +115,11 @@ $(function(){
 		app.deleteNote = function(key){
 			// get the notes from localStorage
 			var notesObj = app.getNotes();
-			// delete selected note
+			// delete selected song
 			delete notesObj[key];
 			// write it back to localStorage
 			localStorage['Notekeeper'] = JSON.stringify(notesObj);
-			// return to the list of notes
+			// return to the list of songs
 			$.mobile.changePage('favorites.htm');
 			// restart the storage check
 			app.checkForStorage();
