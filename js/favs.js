@@ -15,12 +15,12 @@ $(function(){
 	(function(app){
 
 		// variable definitions go here
-		var $artist = $('#artist'),
-			$song = $('#song'),
-			$ul = $('#songlist'),
-			li = '<li><a href="#pgNotesDetail?artist=LINK">ID</a></li>',
-			songsHdr = '<li data-role="list-divider">Your Song List</li>',
-			noSongs = '<li id="noSongs">No songs added</li>';
+		var $title = $('#title'),
+			$note = $('#note'),
+			$ul = $('#notesList'),
+			li = '<li><a href="#pgNotesDetail?title=LINK">ID</a></li>',
+			notesHdr = '<li data-role="list-divider">Song List</li>',
+			noNotes = '<li id="noNotes">No songs added</li>';
 
 		app.init = function(){
 			app.bindings();
@@ -31,17 +31,17 @@ $(function(){
 			// set up binding for form
 			$('#btnAddNote').on('touchend', function(e){
 				e.preventDefault();
-				// save the song
+				// save the note
 				app.addNote(
-					$('#artist').val(),
-					$('#song').val()
+					$('#title').val(),
+					$('#note').val()
 				);
 			});
-			$(document).on('touchend', '#favorites a', function(e){
+			$(document).on('touchend', '#notesList a', function(e){
 				e.preventDefault();
 				var href = $(this)[0].href.match(/\?.*$/)[0];
-				var artist = href.replace(/^\?artist=/,'');
-				app.loadNote(artist);
+				var title = href.replace(/^\?title=/,'');
+				app.loadNote(title);
 			});
 			$(document).on('touchend', '#btnDelete', function(e){
 				e.preventDefault();
@@ -50,31 +50,31 @@ $(function(){
 			});
 		};
 
-		app.loadNote = function(artist){
-			// get songs
+		app.loadNote = function(title){
+			// get notes
 			var notes = app.getNotes(),
-				// lookup specific song
-				song = notes[artist],
+				// lookup specific note
+				note = notes[title],
 				page = ['<div data-role="page">',
 							'<div data-role="header" data-add-back-btn="true">',
 								'<h1>Notekeeper</h1>',
 								'<a id="btnDelete" href="" data-href="ID" data-role="button" class="ui-btn-right">Delete</a>',
 							'</div>',
-							'<div role="main" class="ui-content"><h3>ARTIST</h3><p>SONG</p></div>',
+							'<div role="main" class="ui-content"><h3>TITLE</h3><p>NOTE</p></div>',
 						'</div>'].join('');
 			var newPage = $(page);
 			//append it to the page container
 			newPage.html(function(index,old){
 				return old
-						.replace(/ID/g,aratist)
-						.replace(/ARTIST/g,artist
+						.replace(/ID/g,title)
+						.replace(/TITLE/g,title
 						.replace(/-/g,' '))
-						.replace(/SONG/g,song);
+						.replace(/NOTE/g,note);
 			}).appendTo($.mobile.pageContainer);
 			$.mobile.changePage(newPage);
 		};
 
-		app.addNote = function(artist, song){
+		app.addNote = function(title, note){
 			var notes = localStorage['Notekeeper'],
 				notesObj;
 			if (notes === undefined || notes === '') {
@@ -82,17 +82,17 @@ $(function(){
 			} else {
 				notesObj = JSON.parse(notes);
 			}
-			notesObj[artist.replace(/ /g,'-')] = song;
+			notesObj[title.replace(/ /g,'-')] = note;
 			localStorage['Notekeeper'] = JSON.stringify(notesObj);
 			// clear the two form fields
-			$song.val('');
-			$artist.val('');
+			$note.val('');
+			$title.val('');
 			//update the listview
 			app.displayNotes();
 		};
 
 		app.getNotes = function(){
-			// get songs
+			// get notes
 			var notes = localStorage['Notekeeper'];
 			// convert notes from string to object
 			if(notes) return JSON.parse(notes);
@@ -100,26 +100,26 @@ $(function(){
 		};
 
 		app.displayNotes = function(){
-			// get songs
+			// get notes
 			var notesObj = app.getNotes(),
 				// create an empty string to contain html
 				html = '',
 				n; // make sure your iterators are properly scoped
-			// loop over songs
+			// loop over notes
 			for (n in notesObj) {
 				html += li.replace(/ID/g,n.replace(/-/g,' ')).replace(/LINK/g,n);
 			}
-			$ul.html(songsHdr + html).listview('refresh');
+			$ul.html(notesHdr + html).listview('refresh');
 		};
 
 		app.deleteNote = function(key){
 			// get the notes from localStorage
 			var notesObj = app.getNotes();
-			// delete selected song
+			// delete selected note
 			delete notesObj[key];
 			// write it back to localStorage
 			localStorage['Notekeeper'] = JSON.stringify(notesObj);
-			// return to the list of songs
+			// return to the list of notes
 			$.mobile.changePage('favorites.htm');
 			// restart the storage check
 			app.checkForStorage();
@@ -133,7 +133,7 @@ $(function(){
 				app.displayNotes();
 			} else {
 				// nope, just show the placeholder
-				$ul.html(songsHdr + noSongs).listview('refresh');
+				$ul.html(notesHdr + noNotes).listview('refresh');
 			}
 		};
 
